@@ -11,7 +11,7 @@ from transformers import BertTokenizer, BertModel
 
 if torch.cuda.is_available():
     def from_numpy(ndarray):
-        return torch.from_numpy(ndarray).pin_memory().cuda(async=True)
+        return torch.from_numpy(ndarray).pin_memory().cuda()
 else:
     from torch import from_numpy
 

@@ -1,2 +1,293 @@
 10/20/2020 12:29:46 AM: [ start training: ]
 10/20/2020 12:29:46 AM: [ start epoch:0 ]
+09/04/2023 02:25:01 PM: [ start training: ]
+09/04/2023 02:25:01 PM: [ start epoch:0 ]
+09/04/2023 02:28:26 PM: [ start training: ]
+09/04/2023 02:28:26 PM: [ start epoch:0 ]
+09/04/2023 02:28:49 PM: [ start training: ]
+09/04/2023 02:28:49 PM: [ start epoch:0 ]
+09/04/2023 02:29:35 PM: [ start training: ]
+09/04/2023 02:29:35 PM: [ start epoch:0 ]
+09/04/2023 02:33:50 PM: [ start training: ]
+09/04/2023 02:33:50 PM: [ start epoch:0 ]
+09/04/2023 03:25:42 PM: [ start training: ]
+09/04/2023 03:25:42 PM: [ start epoch:0 ]
+09/04/2023 03:34:27 PM: [ start training: ]
+09/04/2023 03:34:27 PM: [ start epoch:0 ]
+09/04/2023 03:42:16 PM: [ start training: ]
+09/04/2023 03:42:16 PM: [ start epoch:0 ]
+09/04/2023 03:43:25 PM: [ start training: ]
+09/04/2023 03:43:25 PM: [ start epoch:0 ]
+09/05/2023 01:36:56 PM: [ start training: ]
+09/05/2023 01:36:56 PM: [ start epoch:0 ]
+09/05/2023 01:45:51 PM: [ start training: ]
+09/05/2023 01:45:51 PM: [ start epoch:0 ]
+09/05/2023 01:46:32 PM: [ start training: ]
+09/05/2023 01:46:32 PM: [ start epoch:0 ]
+09/05/2023 01:48:16 PM: [ start training: ]
+09/05/2023 01:48:16 PM: [ start epoch:0 ]
+09/05/2023 01:59:33 PM: [ https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json not found in cache or force_download set to True, downloading to /home/ali-siyue/.cache/torch/transformers/tmp_g0inn1q ]
+09/05/2023 01:59:34 PM: [ storing https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json in cache at /home/ali-siyue/.cache/torch/transformers/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517 ]
+09/05/2023 01:59:34 PM: [ creating metadata file for /home/ali-siyue/.cache/torch/transformers/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517 ]
+09/05/2023 01:59:34 PM: [ loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json from cache at /home/ali-siyue/.cache/torch/transformers/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517 ]
+09/05/2023 01:59:34 PM: [ Model config BertConfig {
+  "_num_labels": 2,
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bad_words_ids": null,
+  "bos_token_id": null,
+  "decoder_start_token_id": null,
+  "do_sample": false,
+  "early_stopping": false,
+  "eos_token_id": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "is_encoder_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 512,
+  "min_length": 0,
+  "model_type": "bert",
+  "no_repeat_ngram_size": 0,
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 0,
+  "prefix": null,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "task_specific_params": null,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 30522
+}
+ ]
+09/05/2023 01:59:35 PM: [ https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-pytorch_model.bin not found in cache or force_download set to True, downloading to /home/ali-siyue/.cache/torch/transformers/tmp146dxhg_ ]
+09/05/2023 02:02:28 PM: [ storing https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-pytorch_model.bin in cache at /home/ali-siyue/.cache/torch/transformers/aa1ef1aede4482d0dbcd4d52baad8ae300e60902e88fcb0bebdec09afd232066.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157 ]
+09/05/2023 02:02:28 PM: [ creating metadata file for /home/ali-siyue/.cache/torch/transformers/aa1ef1aede4482d0dbcd4d52baad8ae300e60902e88fcb0bebdec09afd232066.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157 ]
+09/05/2023 02:02:28 PM: [ loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-pytorch_model.bin from cache at /home/ali-siyue/.cache/torch/transformers/aa1ef1aede4482d0dbcd4d52baad8ae300e60902e88fcb0bebdec09afd232066.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157 ]
+09/05/2023 02:02:30 PM: [ https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt not found in cache or force_download set to True, downloading to /home/ali-siyue/.cache/torch/transformers/tmploefvbh8 ]
+09/05/2023 02:02:33 PM: [ storing https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt in cache at /home/ali-siyue/.cache/torch/transformers/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084 ]
+09/05/2023 02:02:33 PM: [ creating metadata file for /home/ali-siyue/.cache/torch/transformers/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084 ]
+09/05/2023 02:02:33 PM: [ loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /home/ali-siyue/.cache/torch/transformers/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084 ]
+09/05/2023 02:02:38 PM: [ start training: ]
+09/05/2023 02:02:38 PM: [ start epoch:0 ]
+09/05/2023 02:07:00 PM: [ start training: ]
+09/05/2023 02:07:00 PM: [ start epoch:0 ]
+09/05/2023 02:08:05 PM: [ start training: ]
+09/05/2023 02:08:05 PM: [ start epoch:0 ]
+09/05/2023 02:08:43 PM: [ loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json from cache at /home/ali-siyue/.cache/torch/transformers/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517 ]
+09/05/2023 02:08:43 PM: [ Model config BertConfig {
+  "_num_labels": 2,
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bad_words_ids": null,
+  "bos_token_id": null,
+  "decoder_start_token_id": null,
+  "do_sample": false,
+  "early_stopping": false,
+  "eos_token_id": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "is_encoder_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 512,
+  "min_length": 0,
+  "model_type": "bert",
+  "no_repeat_ngram_size": 0,
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 0,
+  "prefix": null,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "task_specific_params": null,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 30522
+}
+ ]
+09/05/2023 02:08:44 PM: [ loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-pytorch_model.bin from cache at /home/ali-siyue/.cache/torch/transformers/aa1ef1aede4482d0dbcd4d52baad8ae300e60902e88fcb0bebdec09afd232066.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157 ]
+09/05/2023 02:08:46 PM: [ loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /home/ali-siyue/.cache/torch/transformers/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084 ]
+09/05/2023 02:08:51 PM: [ start training: ]
+09/05/2023 02:08:51 PM: [ start epoch:0 ]
+09/05/2023 02:19:02 PM: [ loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-config.json from cache at /home/ali-siyue/.cache/torch/transformers/4dad0251492946e18ac39290fcfe91b89d370fee250efe9521476438fe8ca185.7156163d5fdc189c3016baca0775ffce230789d7fa2a42ef516483e4ca884517 ]
+09/05/2023 02:19:02 PM: [ Model config BertConfig {
+  "_num_labels": 2,
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bad_words_ids": null,
+  "bos_token_id": null,
+  "decoder_start_token_id": null,
+  "do_sample": false,
+  "early_stopping": false,
+  "eos_token_id": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "is_encoder_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-12,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 512,
+  "min_length": 0,
+  "model_type": "bert",
+  "no_repeat_ngram_size": 0,
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 0,
+  "prefix": null,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "task_specific_params": null,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "use_bfloat16": false,
+  "vocab_size": 30522
+}
+ ]
+09/05/2023 02:19:03 PM: [ loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-pytorch_model.bin from cache at /home/ali-siyue/.cache/torch/transformers/aa1ef1aede4482d0dbcd4d52baad8ae300e60902e88fcb0bebdec09afd232066.36ca03ab34a1a5d5fa7bc3d03d55c4fa650fed07220e2eeebc06ce58d0e9a157 ]
+09/05/2023 02:19:05 PM: [ loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt from cache at /home/ali-siyue/.cache/torch/transformers/26bc1ad6c0ac742e9b52263248f6d0f00068293b33709fae12320c0e35ccfbbb.542ce4285a40d23a559526243235df47c5f75c197f04f37d1a0c124c32c9a084 ]
+09/05/2023 02:19:10 PM: [ start training: ]
+09/05/2023 02:19:10 PM: [ start epoch:0 ]
+09/05/2023 02:19:34 PM: [ start training: ]
+09/05/2023 02:19:34 PM: [ start epoch:0 ]
+09/05/2023 02:22:48 PM: [ start training: ]
+09/05/2023 02:22:48 PM: [ start epoch:0 ]
+09/05/2023 02:24:01 PM: [ start training: ]
+09/05/2023 02:24:01 PM: [ start epoch:0 ]
+09/05/2023 02:36:50 PM: [ start training: ]
+09/05/2023 02:36:50 PM: [ start epoch:0 ]
+09/05/2023 02:39:28 PM: [ start training: ]
+09/05/2023 02:39:28 PM: [ start epoch:0 ]
+09/05/2023 02:50:15 PM: [ start training: ]
+09/05/2023 02:50:15 PM: [ start epoch:0 ]
+09/05/2023 02:51:16 PM: [ start training: ]
+09/05/2023 02:51:16 PM: [ start epoch:0 ]
+09/05/2023 02:57:50 PM: [ start training: ]
+09/05/2023 02:57:50 PM: [ start epoch:0 ]
+09/05/2023 02:58:32 PM: [ start training: ]
+09/05/2023 02:58:32 PM: [ start epoch:0 ]
+09/05/2023 03:05:39 PM: [ start training: ]
+09/05/2023 03:05:39 PM: [ start epoch:0 ]
+09/05/2023 03:27:48 PM: [ start training: ]
+09/05/2023 03:27:48 PM: [ start epoch:0 ]
+09/05/2023 03:36:34 PM: [ start training: ]
+09/05/2023 03:36:34 PM: [ start epoch:0 ]
+09/05/2023 03:42:31 PM: [ start training: ]
+09/05/2023 03:42:31 PM: [ start epoch:0 ]
+09/05/2023 04:04:56 PM: [ start training: ]
+09/05/2023 04:04:56 PM: [ start epoch:0 ]
+09/05/2023 04:05:40 PM: [ start training: ]
+09/05/2023 04:05:40 PM: [ start epoch:0 ]
+09/05/2023 04:14:18 PM: [ start training: ]
+09/05/2023 04:14:18 PM: [ start epoch:0 ]
+09/05/2023 04:15:32 PM: [ start training: ]
+09/05/2023 04:15:32 PM: [ start epoch:0 ]
+09/05/2023 04:25:13 PM: [ start training: ]
+09/05/2023 04:25:13 PM: [ start epoch:0 ]
+09/05/2023 04:26:56 PM: [ start training: ]
+09/05/2023 04:26:56 PM: [ start epoch:0 ]
+09/05/2023 04:27:56 PM: [ start training: ]
+09/05/2023 04:27:56 PM: [ start epoch:0 ]
+09/05/2023 04:29:30 PM: [ start training: ]
+09/05/2023 04:29:30 PM: [ start epoch:0 ]
+09/05/2023 04:38:28 PM: [ logical form accurate: 0/2246 = 0.0% ]
+09/05/2023 04:38:28 PM: [ num of execution correct: 0/2246 = 0.0% ]
+09/05/2023 04:38:28 PM: [ perplexity: 6.797541698117586 ]
+09/05/2023 04:38:28 PM: [ number of steps: 30, loss: 49.92999 time: 538.12697 ]
+09/05/2023 04:48:48 PM: [ logical form accurate: 1/2246 = 0.04452359750667854% ]
+09/05/2023 04:48:48 PM: [ num of execution correct: 3/2246 = 0.13357079252003562% ]
+09/05/2023 04:48:48 PM: [ perplexity: 3.63058244472649 ]
+09/05/2023 04:48:48 PM: [ number of steps: 60, loss: 34.55030 time: 1158.22081 ]
+09/05/2023 04:48:53 PM: [ start epoch:1 ]
+09/05/2023 04:59:55 PM: [ logical form accurate: 43/2246 = 1.914514692787177% ]
+09/05/2023 04:59:55 PM: [ num of execution correct: 175/2246 = 7.791629563668745% ]
+09/05/2023 04:59:55 PM: [ perplexity: 1.8561298059659275 ]
+09/05/2023 04:59:55 PM: [ number of steps: 30, loss: 23.70812 time: 1824.46141 ]
+09/05/2023 05:10:57 PM: [ logical form accurate: 52/2246 = 2.315227070347284% ]
+09/05/2023 05:10:57 PM: [ num of execution correct: 195/2246 = 8.682101513802316% ]
+09/05/2023 05:10:57 PM: [ perplexity: 1.7004379005512198 ]
+09/05/2023 05:10:57 PM: [ number of steps: 60, loss: 21.56559 time: 2486.69855 ]
+09/05/2023 05:11:02 PM: [ start epoch:2 ]
+09/05/2023 05:21:14 PM: [ logical form accurate: 47/2246 = 2.0926090828138912% ]
+09/05/2023 05:21:14 PM: [ num of execution correct: 188/2246 = 8.370436331255565% ]
+09/05/2023 05:21:14 PM: [ perplexity: 1.7057675952444125 ]
+09/05/2023 05:21:14 PM: [ number of steps: 30, loss: 17.25302 time: 3103.98611 ]
+09/05/2023 05:27:18 PM: [ logical form accurate: 41/2246 = 1.8254674977738201% ]
+09/05/2023 05:27:18 PM: [ num of execution correct: 178/2246 = 7.92520035618878% ]
+09/05/2023 05:27:18 PM: [ perplexity: 1.556772547651907 ]
+09/05/2023 05:27:18 PM: [ number of steps: 60, loss: 15.17105 time: 3467.83126 ]
+09/05/2023 05:27:21 PM: [ start epoch:3 ]

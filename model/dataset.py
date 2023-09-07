@@ -4,6 +4,8 @@ import json
 import csv
 import re
 import numpy as np
+import sys
+sys.path.append("/home/ali-siyue/Projects/tmp/data/squall/model")
 from utils import parse_number
 import torch
 from collections import Counter

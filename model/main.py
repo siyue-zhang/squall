@@ -44,6 +44,9 @@ def evaluate(data_loader, model, evaluator, gold_decode=False):
         model.eval()
         prediction, _log_probs = model(batch, isTrain=False, gold_decode=gold_decode)
         ex_acc = evaluator.evaluate(prediction)
+        if idx == 1:
+            print("example prediction: ")
+            print(prediction)
         log_probs.extend(_log_probs)
         for d in prediction:
             total += 1
@@ -77,7 +80,7 @@ if __name__ == "__main__":
     parser.add_argument('--embed-file', type=str, default='../embeddings/glove.100d.training.json')
 
     parser.add_argument('--batch-size', type=int, default=8)
-    parser.add_argument('--num-epochs', type=int, default=30)
+    parser.add_argument('--num-epochs', type=int, default=5)
     parser.add_argument('--input-size', type=int, default=300)
     parser.add_argument('--hidden-size', type=int, default=300)
     parser.add_argument('--num-layers', type=int, default=1)
@@ -94,7 +97,7 @@ if __name__ == "__main__":
     parser.add_argument('--aux-col', action='store_true', default=False)
     parser.add_argument('--gold-decode', action='store_true', default=False)
     parser.add_argument('--gold-attn', action='store_true', default=False)
-    parser.add_argument('--sample', type=int, default=50000)
+    parser.add_argument('--sample', type=int, default=1000)
     parser.add_argument('--bert', action='store_true', default=False)
 
     args = parser.parse_args()
@@ -131,7 +134,7 @@ if __name__ == "__main__":
     train_sampler = torch.utils.data.sampler.RandomSampler(train_dataset)
     dev_dataset = dataset.WikiTableDataset(dev_exs, vocab)
     dev_sampler = torch.utils.data.sampler.SequentialSampler(dev_dataset)
-    dev_loader = torch.utils.data.DataLoader(dev_dataset, batch_size=1,
+    dev_loader = torch.utils.data.DataLoader(dev_dataset, batch_size=args.batch_size,
                                                sampler=dev_sampler, num_workers=args.data_workers,
                                                collate_fn=dataset.batchify, pin_memory=args.cuda)
 
@@ -145,7 +148,7 @@ if __name__ == "__main__":
         test_exs = em_process(load_dataset(args.test_file))
         test_dataset = dataset.WikiTableDataset(test_exs, vocab)
         test_sampler = torch.utils.data.sampler.SequentialSampler(test_dataset)
-        test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=1,
+        test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=args.batch_size,
                                                sampler=test_sampler, num_workers=args.data_workers,
                                                collate_fn=dataset.batchify, pin_memory=args.cuda)
 
