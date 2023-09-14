@@ -427,3 +427,77 @@ class Evaluator:
         #print("Failed:", num_fail, "out of", num_examples)
 
         return num_correct
+
+
+    def evaluate_with_target(self, predictions):
+        num_examples, num_correct = 0, 0
+        num_fail = 0
+        targets = []
+        predicted = []
+        for pred in predictions:
+            table_id = pred['table_id']
+            ####   find the exact db file
+            db_file = self.db_path + table_id + '.db'
+            table_file = self.db_path + "../json/" + table_id + ".json"
+
+            with open(table_file, "r") as f:
+                table_json = json.load(f)
+
+            connection = sqlite3.connect(db_file)
+            c = connection.cursor()
+            results = pred['result']
+            for result in results:
+                predicted_values = list()
+                ex_id = result['id']
+                targets.append(self.target_values_map[ex_id])
+                sql = result['sql']
+                # print("sql: ", sql)
+                # single quote mark ' lead to no response
+                num_mark = sql.count("'")
+                # print("MARK: ", num_mark)
+                if num_mark % 2 == 1:
+                    num_fail += 1
+                    predicted_values = list()
+                else:
+                    try:
+                        sql = requests.get("http://localhost:3000/", json={"sql": sql, "is_list": table_json["is_list"]}).json()
+
+                        c.execute(sql)
+
+                        answer_list = list()
+                        nlp_list = list()
+                        for result, in c:
+                            result = str(result)
+                            ann = self.client.annotate(result)
+                            if len(ann.mentions) == 0:
+                                nlp_list.append(result)
+                            elif len(ann.mentions) > 1:
+                                #print('corenlp annotation wrong!', ann.mentions)
+                                nlp_list.append(result)
+                            else:
+                                nlp_list.append(ann.mentions[0].normalizedNER)
+
+                            answer_list.append(result)
+                        predicted_values = to_value_list(answer_list)
+                    except Exception as e:
+                        # print("Evaluation failure", e)
+                        num_fail += 1
+                        predicted_values = list()
+
+                if ex_id not in self.target_values_map:
+                    print('WARNING: Example ID "%s" not found' % ex_id)
+                else:
+                    target_values = self.target_values_map[ex_id]
+
+                    # print("target_values, predicted_values: ", target_values, predicted_values)
+                    correct = check_denotation(target_values, predicted_values)
+                    num_examples += 1
+                    if correct:
+                        num_correct += 1
+                    # pred["ex_correct"] = True
+                predicted.append(predicted_values)
+
+        # acc = (num_correct + 1e-9) / (num_examples + 1e-9)
+        #print("Failed:", num_fail, "out of", num_examples)
+
+        return num_correct, targets, predicted
