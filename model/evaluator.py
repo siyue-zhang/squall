@@ -501,3 +501,24 @@ class Evaluator:
         #print("Failed:", num_fail, "out of", num_examples)
 
         return num_correct, targets, predicted
+
+
+    def evaluate_rtr(self, preds, ex_ids):
+
+        num_examples, num_correct = 0, 0
+        for p, i in zip(preds, ex_ids):
+            assert i in self.target_values_map, f'ERROR: Example ID {i} not found'
+            target_values = self.target_values_map[i]
+            if isinstance(p, list):
+                answer_list = p
+            else:
+                answer_list = [p]
+            predicted_values = to_value_list(answer_list)
+            correct = check_denotation(target_values, predicted_values)
+            num_examples += 1
+            if correct:
+                num_correct += 1
+
+        return num_correct
+
+
