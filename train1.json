@@ -1,0 +1,125 @@
+{
+    "203_447": {
+        "nt": "nt-12427",
+        "question_toks": [
+            "when",
+            "was",
+            "antonio",
+            "horvath",
+            "kiss",
+            "last",
+            "elected",
+            "?"
+        ],
+        "sql": "select last elected_number from 203_447 where name = 'antonio horvath kiss'",
+        "tables": [
+            "203_447"
+        ],
+        "columns": [
+            "constituency",
+            "constituency_number",
+            "region",
+            "name",
+            "name_first",
+            "name_second",
+            "party",
+            "last elected",
+            "last elected_number"
+        ],
+        "column_types": [
+            "text",
+            "real",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "text",
+            "real"
+        ],
+        "header": [
+            "constituency",
+            "region",
+            "name",
+            "party",
+            "last elected"
+        ],
+        "tgt": "2001"
+    },
+    "204_899": {
+        "nt": "nt-11334",
+        "question_toks": [
+            "what",
+            "are",
+            "the",
+            "total",
+            "number",
+            "of",
+            "tornado",
+            "events",
+            "that",
+            "occurred",
+            "in",
+            "1960",
+            "in",
+            "the",
+            "u.s.",
+            "?"
+        ],
+        "sql": "select sum ( tornadoes_number ) from 204_899 where date_minimum_year = 1960",
+        "tables": [
+            "204_899"
+        ],
+        "columns": [
+            "event",
+            "date",
+            "date_minimum_number",
+            "date_minimum_parsed",
+            "date_minimum_day",
+            "date_minimum_month",
+            "date_minimum_year",
+            "date_maximum_number",
+            "date_maximum_parsed",
+            "date_maximum_day",
+            "date_maximum_month",
+            "date_maximum_year",
+            "area",
+            "area_list",
+            "area_length",
+            "tornadoes",
+            "tornadoes_number",
+            "casualties",
+            "notes"
+        ],
+        "column_types": [
+            "text",
+            "text",
+            "real",
+            "text",
+            "real",
+            "real",
+            "real",
+            "real",
+            "text",
+            "real",
+            "real",
+            "real",
+            "text",
+            "text",
+            "real",
+            "text",
+            "real",
+            "text",
+            "text"
+        ],
+        "header": [
+            "event",
+            "date",
+            "area",
+            "tornadoes",
+            "casualties",
+            "notes"
+        ],
+        "tgt": "66"
+    }
+}
